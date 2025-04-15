@@ -1,38 +1,44 @@
-# ApiTodoListpy
+# ✅ ApiTodoListpy
 
-**ApiTodoListpy** é uma API REST desenvolvida com **Flask** e **SQLite**, ideal para gerenciamento de tarefas (To-Do).  
+**ApiTodoListpy** é uma **API RESTful** desenvolvida com **Flask** e **SQLite**, projetada para o gerenciamento eficiente de tarefas (To-Do List).
 
-Ela permite **criar, listar, atualizar, excluir e acompanhar o progresso de tarefas**, além de oferecer funcionalidades extras como **exportação em PDF** e **estatísticas em tempo real**.
+Ela oferece funcionalidades completas para:
 
-A aplicação utiliza **SQLAlchemy** como ORM e organiza as tarefas com campos como:
+- 📌 Criar, listar, atualizar e excluir tarefas  
+- 📊 Acompanhar o progresso com estatísticas em tempo real  
+- 📝 Exportar um relatório completo em **PDF**
 
-- Título  
-- Status (feito ou não)  
-- Timestamps de criação e atualização
+A API utiliza **SQLAlchemy** como ORM para abstração do banco de dados e armazena informações como:
 
-Com a rota `/exportar/pdf`, o usuário pode gerar um **relatório completo das tarefas em formato PDF**, incluindo **estatísticas de conclusão**.
-
----
-
-### Rotas disponíveis
-
-- `GET /tarefas` - Lista todas as tarefas  
-- `POST /tarefas` - Cria uma nova tarefa  
-- `PUT /tarefas/<id>` - Atualiza uma tarefa existente  
-- `DELETE /tarefas/<id>` - Deleta uma tarefa  
-- `GET /tarefas/estatisticas` - Retorna estatísticas de conclusão  
-- `GET /exportar/pdf` - Gera um PDF com todas as tarefas e estatísticas  
+- Título da tarefa  
+- Status (concluída ou pendente)  
+- Data de criação e atualização (timestamps)
 
 ---
 
-### Requisitos
+## 🚀 Funcionalidades e Rotas
+
+| Método | Rota                  | Descrição                                  |
+|--------|-----------------------|--------------------------------------------|
+| GET    | `/tarefas`            | 🔍 Lista todas as tarefas                   |
+| POST   | `/tarefas`            | ➕ Cria uma nova tarefa                     |
+| PUT    | `/tarefas/<id>`       | 🔁 Atualiza uma tarefa existente           |
+| DELETE | `/tarefas/<id>`       | ❌ Remove uma tarefa pelo ID               |
+| GET    | `/tarefas/estatisticas` | 📊 Retorna estatísticas de tarefas       |
+| GET    | `/exportar/pdf`       | 🖨️ Gera e baixa um PDF com tarefas + stats |
+
+---
+
+## 📦 Requisitos
 
 - Python 3.x  
 - Flask  
 - Flask SQLAlchemy  
 - ReportLab
 
-Instale os requisitos com:
+### 📥 Instalação
+
+Clone o repositório e instale os pacotes necessários:
 
 ```bash
 pip install flask flask_sqlalchemy reportlab
